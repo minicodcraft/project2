@@ -5,7 +5,7 @@ using namespace std;
 
 
 unsigned Game::nGames = 0; 
-unsigned Game::nextID = 1000; 
+unsigned Game::nextID = 1001; 
 
 Game::Game():ID(nextID){
   this->player1_ = "Unknown";

@@ -8,8 +8,10 @@
 #include <fstream>
 using namespace std;
 
+string waitingPlayer = "";
+
 GameSystem::GameSystem(){
-  this-> waitingPlayer = "";
+  waitingPlayer = "";
 }
 
 bool GameSystem::initPlayers(){
