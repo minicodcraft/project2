@@ -11,6 +11,7 @@ class GameSystem {
   private:
     vector<Player> players_;
     vector<Game> games_;
+    string waitingPlayer;
   public:
     GameSystem();
     void sort();

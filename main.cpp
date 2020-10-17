@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "GameSystem.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int main() {
@@ -11,5 +12,23 @@ int main() {
   system.sort();
   cout << "Before prossessing activities.txt:" << endl;
   system.displayPlayers();
+
+  ifstream input;
+  input.open("activities.txt");
+
+  string userlogin;
+  string userpassword;
+  string action;
+
+
+  while(!input.eof()){
+    input >> action;
+    input >> userlogin;
+    input >> userpassword;
+    if(action == "login"){
+      system.login(userlogin, userpassword);
+    }
+  }
+  
 } //end of main
  

@@ -9,6 +9,7 @@
 using namespace std;
 
 GameSystem::GameSystem(){
+  this-> waitingPlayer = "";
 }
 
 bool GameSystem::initPlayers(){
@@ -74,5 +75,23 @@ void GameSystem::displayGames() const{
 }
 
 void GameSystem::login(const string& username, const string& password) const{
+  bool loginAttempt = false;
+  for(int loop = 0; loop < players_.size(); loop++){
+    if(username == players_[loop].getName() && password == players_[loop].getPassword()){
+        loginAttempt = true;
+    }
+  }
   
+  if(loginAttempt == false){
+    cout << "Invalid login with username : " << username << " and password: " << password << endl;
+  }
+  else{
+    if(waitingPlayer == ""){
+      cout << "Welcome " << username << ". As soon as another player joins the game will start." << endl;
+      waitingPlayer = username;
+    }
+    else{
+      cout << "Welcome " << username << ". " << waitingPlayer << " is ready to play with you." << endl;
+    }
+  }
 }

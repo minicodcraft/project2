@@ -23,3 +23,6 @@ const string Player::getName() const{
 const int Player::getWins() const{
   return nWins_;
 }
+const string Player::getPassword() const{
+  return password_;
+}
