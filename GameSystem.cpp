@@ -76,7 +76,7 @@ void GameSystem::displayGames() const{
   }
 }
 
-void GameSystem::login(const string& username, const string& password) const{
+void GameSystem::login(const string& username, const string& password){
   bool loginAttempt = false;
   for(int loop = 0; loop < players_.size(); loop++){
     if(username == players_[loop].getName() && password == players_[loop].getPassword()){
@@ -94,6 +94,13 @@ void GameSystem::login(const string& username, const string& password) const{
     }
     else{
       cout << "Welcome " << username << ". " << waitingPlayer << " is ready to play with you." << endl;
+
+      Game newGame(waitingPlayer, username);
+      games_.push_back(newGame);
+
+     cout << "Starting game #" << newGame.getID() << " with players " << waitingPlayer << " and " << username << endl;
+
+      waitingPlayer = "";
     }
   }
 }

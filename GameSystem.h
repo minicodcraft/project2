@@ -18,6 +18,6 @@ class GameSystem {
     bool initPlayers();
     void displayPlayers() const;
     void displayGames() const;
-    void login(const string& username, const string& password) const;
+    void login(const string& username, const string& password);
 };
 #endif

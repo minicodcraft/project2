@@ -13,6 +13,8 @@ int main() {
   cout << "Before prossessing activities.txt:" << endl;
   system.displayPlayers();
 
+  cout << "\n";
+
   ifstream input;
   input.open("activities.txt");
 
