@@ -1,0 +1,14 @@
+login mickey playhouse
+login mickeymouse clubhouse
+login donaldduck phooey
+login pluto gawrsh
+login pluto bloodhound
+login goofy gawrsh
+end 1002 3 4
+end 1001 4 2
+login minniemouse polkadot
+login mickeymouse clubhouse
+end 1003 2 2
+login donaldduck phooey
+login goofy gawrsh
+end 1004 2 5
