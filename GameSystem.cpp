@@ -76,6 +76,7 @@ void GameSystem::displayGames() const{
   }
 }
 
+
 void GameSystem::login(const string& username, const string& password){
   bool loginAttempt = false;
   for(int loop = 0; loop < players_.size(); loop++){
@@ -129,12 +130,12 @@ void GameSystem::endGame(unsigned gameID, unsigned firstScore, unsigned secondSc
     winner = games_[index].getPlayer2();
   }
 
-  cout << "The winner is " << winner << endl;
-
   for(int loop = 0; loop < players_.size(); loop++){
     if(winner == players_[loop].getName()){
       players_[loop].updateWins();
     }
   }
+
+
 
 }

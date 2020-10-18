@@ -43,6 +43,10 @@ int main() {
 
   cout << "\n";
 
+  system.displayGames();
+
+  cout << "\n";
+
   cout << "After prossessing activities.txt:" << endl;
   system.displayPlayers();
 
