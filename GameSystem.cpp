@@ -65,7 +65,7 @@ void GameSystem::sort(){
   }
 }
 
-void GameSystem::displayPlayers() const{
+void GameSystem::displayPlayers(){
   for(int loop = 0; loop < players_.size(); loop++){
     //cout << players_[loop].getName() << " has " << players_[loop].getWins() << endl;
     cout << players_[loop] << endl;
@@ -73,9 +73,9 @@ void GameSystem::displayPlayers() const{
 }
 
 
-void GameSystem::displayGames() const{
+void GameSystem::displayGames(){
   for(int loop = 0; loop < games_.size(); loop++){
-    cout << "Game " << games_[loop].getID() << "    " << games_[loop].getPlayer1() << "    " << games_[loop].getFirstScore() << "    " << games_[loop].getPlayer2() << "    " << games_[loop].getSecondScore() << endl;
+    cout << games_[loop] << endl;
   }
 }
 

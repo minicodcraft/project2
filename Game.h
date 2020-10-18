@@ -30,6 +30,7 @@ class Game {
     const int getFirstScore() const;
     const int getSecondScore() const;
     const unsigned getID() const;
+    friend ostream& operator <<(ostream& output, Game& game);
 
 };
 

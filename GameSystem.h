@@ -16,8 +16,8 @@ class GameSystem {
     GameSystem();
     void sort();
     bool initPlayers();
-    void displayPlayers() const;
-    void displayGames() const;
+    void displayPlayers();
+    void displayGames();
     void login(const string& username, const string& password);
     void endGame(unsigned gameID, unsigned firstScore, unsigned secondScore);
 };
