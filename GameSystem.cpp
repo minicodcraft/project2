@@ -66,7 +66,9 @@ void GameSystem::sort(){
 
 void GameSystem::displayPlayers() const{
   for(int loop = 0; loop < players_.size(); loop++){
-    cout << players_[loop].getName() << " has " << players_[loop].getWins() << endl;
+    //cout << players_[loop].getName() << " has " << players_[loop].getWins() << endl;
+
+    cout << players_[loop] << endl;
   }
 }
 
