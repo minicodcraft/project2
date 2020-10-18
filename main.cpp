@@ -25,9 +25,11 @@ int main() {
 
   while(!input.eof()){
     input >> action;
-    input >> userlogin;
-    input >> userpassword;
     if(action == "login"){
+      input >> userlogin;
+      input >> userpassword;
+      //cout << "userlogin: " << userlogin << endl;
+      //cout << "Password: " << userpassword << endl;
       system.login(userlogin, userpassword);
     }
   }
