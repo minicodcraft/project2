@@ -26,3 +26,7 @@ const int Player::getWins() const{
 const string Player::getPassword() const{
   return password_;
 }
+
+void Player::updateWins(){
+  nWins_++;
+}

@@ -21,6 +21,9 @@ int main() {
   string userlogin;
   string userpassword;
   string action;
+  unsigned ID;
+  unsigned int score1;
+  unsigned int score2;
 
 
   while(!input.eof()){
@@ -28,11 +31,21 @@ int main() {
     if(action == "login"){
       input >> userlogin;
       input >> userpassword;
-      //cout << "userlogin: " << userlogin << endl;
-      //cout << "Password: " << userpassword << endl;
       system.login(userlogin, userpassword);
     }
+    else if(action == "end"){
+      input >> ID;
+      input >> score1;
+      input >> score2;
+      system.endGame(ID, score1, score2);
+    }
   }
+
+  cout << "\n";
+
+  cout << "After prossessing activities.txt:" << endl;
+  system.displayPlayers();
+
   
 } //end of main
  

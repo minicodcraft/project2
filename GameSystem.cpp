@@ -104,3 +104,37 @@ void GameSystem::login(const string& username, const string& password){
     }
   }
 }
+
+void GameSystem::endGame(unsigned gameID, unsigned firstScore, unsigned secondScore){
+  //cout << "test1" << endl;
+  int index;
+  for (int loop = 0; loop < games_.size(); loop++){
+    //cout << "test2" << endl;
+    if(gameID == games_[loop].getID()){
+      //cout << "test3" << endl;
+      index = loop;
+    }
+  }
+  //cout << "test4" << endl;
+  games_[index].updateScore(firstScore, secondScore);
+  //cout << "test5" << endl;
+
+  cout << "Ending game #" << gameID << " with " << games_[index].getPlayer1() << " having " << games_[index].getFirstScore() << " and " << games_[index].getPlayer2() << " having " << games_[index].getSecondScore() << endl;
+
+  string winner;
+  if(firstScore > secondScore){
+    winner = games_[index].getPlayer1();
+  }
+  else{
+    winner = games_[index].getPlayer2();
+  }
+
+  cout << "The winner is " << winner << endl;
+
+  for(int loop = 0; loop < players_.size(); loop++){
+    if(winner == players_[loop].getName()){
+      players_[loop].updateWins();
+    }
+  }
+
+}

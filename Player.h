@@ -17,5 +17,6 @@ class Player {
     const string getName() const;
     const int getWins() const;
     const string getPassword() const;
+    void updateWins();
 }; 
 #endif

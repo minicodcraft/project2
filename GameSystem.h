@@ -19,5 +19,6 @@ class GameSystem {
     void displayPlayers() const;
     void displayGames() const;
     void login(const string& username, const string& password);
+    void endGame(unsigned gameID, unsigned firstScore, unsigned secondScore);
 };
 #endif
