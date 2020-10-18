@@ -21,4 +21,5 @@ class GameSystem {
     void login(const string& username, const string& password);
     void endGame(unsigned gameID, unsigned firstScore, unsigned secondScore);
 };
+
 #endif

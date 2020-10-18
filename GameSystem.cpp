@@ -1,6 +1,7 @@
 #include "GameSystem.h"
 #include "Player.h"
 #include "Game.h"
+#include "library.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -67,10 +68,10 @@ void GameSystem::sort(){
 void GameSystem::displayPlayers() const{
   for(int loop = 0; loop < players_.size(); loop++){
     //cout << players_[loop].getName() << " has " << players_[loop].getWins() << endl;
-
     cout << players_[loop] << endl;
   }
 }
+
 
 void GameSystem::displayGames() const{
   for(int loop = 0; loop < games_.size(); loop++){
@@ -137,7 +138,5 @@ void GameSystem::endGame(unsigned gameID, unsigned firstScore, unsigned secondSc
       players_[loop].updateWins();
     }
   }
-
-
 
 }

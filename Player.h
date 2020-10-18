@@ -19,6 +19,5 @@ class Player {
     const string getPassword() const;
     void updateWins();
     friend ostream& operator <<(ostream& output, Player& player);
-  
 }; 
 #endif

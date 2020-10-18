@@ -30,8 +30,3 @@ const string Player::getPassword() const{
 void Player::updateWins(){
   nWins_++;
 }
-
-ostream& operator <<(ostream& output, Player& player){
-  output << player.username_ << "has " << player.nWins_ << " wins" << endl;
-  return output;
-}

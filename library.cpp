@@ -1,6 +1,7 @@
 //Add the implementation of operator<< for Game and Player
 #include "GameSystem.h"
 #include "Player.h"
+#include "library.h"
 #include <vector>
 #include <string>
 #include <iostream>
